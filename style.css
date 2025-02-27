@@ -22,7 +22,9 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 80px;
+    width: auto;
+    padding-left: 20px;
 }
 
 nav ul {
