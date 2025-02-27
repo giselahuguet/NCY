@@ -25,14 +25,14 @@ header {
 }
 
 .logo img {
-    height: 150px;
+    height: 125px;
     width: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 
 nav ul li {
