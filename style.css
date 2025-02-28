@@ -6,10 +6,17 @@
     box-sizing: border-box;
 }
 
+/* General */
 body {
     font-family: 'Belleza', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('fondo1.webp') no-repeat center center fixed;
+    background-size: cover;
 }
 
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -24,8 +31,23 @@ header {
     z-index: 1000;
 }
 
+/* Ajuste general para evitar deformaciones en diferentes tamaños de pantalla */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+  }
+
 .logo img {
-    height: 125px;
+    margin-left: 15px;
+    margin-top: 8px;
+    height: 100px;
     width: auto;
 }
 
@@ -33,6 +55,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 40px;
+    margin-right: 25px;
 }
 
 nav ul li {
@@ -46,17 +69,163 @@ nav ul li a {
     font-weight: bold;
 }
 
-.background-image {
-    height: 100vh;
-    background: url('fondo1.webp') no-repeat center center/cover;
+/* Sección FOTO 1 */
+.foto1-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Mantiene la altura sin forzar el tamaño en pantallas pequeñas */
+    padding: 50px;
 }
 
-.dark-green-band {
-    height: 300px;
-    background-color: #013220; /* Verde oscuro mono */
+.foto1-content {
+    display: flex;
+    width: 60%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción del recuadro */
+    background: linear-gradient(to right, #d4d4b7 50%, #6d7745 50%);
+    padding: 30px;
+    text-align: center;
+    max-width: 800px; /* Evita que se haga demasiado grande */
+    max-height: 450px; /* Evita que se deforme en pantallas pequeñas */
 }
 
-.white-band {
-    height: 300px;
-    background-color: white;
+.foto1-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 100%;
+    color: #2a3c1b; /* Color oscuro para mejor legibilidad */
+}
+
+/* Texto de la parte izquierda */
+.foto1-left h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.2;
+    width: 80%;
+}
+
+/* Imagen en la parte izquierda */
+.foto1-left img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para la parte derecha */
+.foto1-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen en la parte derecha */
+.foto1-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Banda de Noticias Recientes */
+.noticias {
+    background-color: #e6e3e3;
+    padding: 40px;
+    text-align: center;
+    width: 95%;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel img {
+    max-width: 300px;
+    height: auto;
+    align-items: center;
+}
+
+.carousel button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.bigcontainer {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #eaead8;
+}
+
+/* Sección Misión */
+.mision {
+    width: 95%; /* Reducir el ancho de la sección */
+    margin: 20px auto; /* Centra las secciones */
+    padding: 20px;
+    background-color: #d4d4b7;
+    text-align: center;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ajuste de la sección misión para que las imágenes estén en una sola fila y sean más pequeñas */
+.imagenes-mision {
+    display: flex; /* Las imágenes estarán en una sola fila */
+    justify-content: center; /* Centra las imágenes */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten si la pantalla es muy pequeña */
+    gap: 10px;
+  }
+  
+  .imagenes-mision img {
+    width: 15%; /* Reduce el tamaño de las imágenes */
+    max-width: 120px; /* Limita el tamaño máximo para evitar que se hagan demasiado grandes */
+    height: auto;
+  }
+
+/* Sección Visión */
+.vision {
+    width: 95%; /* Reducir el ancho de la sección */
+    margin: 20px auto; /* Centra las secciones */
+    padding: 20px;
+    background-color: #6d7745;
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.vision-content img {
+    width: 300px;
+    height: auto;
+}
+
+/* Sección Valores */
+.valores {
+    width: 95%; /* Reducir el ancho de la sección */
+    margin: 20px auto; /* Centra las secciones */
+    padding: 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #4a5b29;
+    font-weight: bold;
+}
+.esquema-valores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }

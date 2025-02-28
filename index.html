@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yengCosmetics</title>
+    <title>Yeng Cosmetics</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <img src="logoW.webp" alt="yengCosmetics">
+            <img src="logoW.webp" alt="Yeng Cosmetics">
         </div>
         <nav>
             <ul>
                 <li><a href="#">NECESIDAD</a></li>
                 <li><a href="#">SOLUCIÓN</a></li>
-                <li><a href="#">ALIANZAS</a></li>
+                <li><a href="#">COLABORADORES</a></li>
                 <li><a href="#">GANCHO</a></li>
                 <li><a href="#">PROTOTIPOS</a></li>
                 <li><a href="#">QUIÉNES SOMOS</a></li>
@@ -25,10 +25,82 @@
     </header>
 
     <main>
-        <section class="background-image">
-            <!-- ⚠️Aquí puedes poner contenido o cambiar la imagen de fondo en el CSS⚠️ -->
+        <!-- Sección FOTO 1 -->
+        <section class="foto1-container">
+            <div class="foto1-content">
+                <div class="foto1-left">
+                    <h2>Tu piel lo siente, el planeta lo agradece</h2>
+                    <img src="icono.webp" alt="Imagen representativa">
+                </div>
+                <div class="foto1-right">
+                    <img src="logoSF.webp" alt="Logo Yeng Cosmetics">
+                </div>
+            </div>
         </section>
-    </main>
+    
+    <!-- Banda de Noticias Recientes -->
+    <section class="noticias">
+        <h2>NOTICIAS RECIENTES:</h2>
+        <div class="noticias-content">
+            <p>Presentación de los primeros prototipos en la inauguración de la tienda sostenible “La Botiga de l'Aprenent” del CIPFP CIUTAT DE L'APRENENT. 25 febrero 2025.</p>
+            <div class="carousel">
+                <button id="prev">&#60;</button>
+                <img id="noticia-img" src="noticia1.webp" alt="Noticia 1">
+                <button id="next">&#62;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bigcontainer">
+    <!-- Sección Misión -->
+    <div class="mision">
+        <h2>Misión</h2>
+        <p>Formar a futuros profesionales de la estética en cosmética natural, sólida y sostenible...</p>
+        <div class="imagenes-mision">
+            <img src="ods1.webp" alt="Imagen 1">
+            <img src="ods2.webp" alt="Imagen 2">
+            <img src="ods3.webp" alt="Imagen 3">
+            <img src="ods4.webp" alt="Imagen 4">
+            <img src="ods5.webp" alt="Imagen 5">
+        </div>
+        <p class="mas-info">Más información</p>
+    </div>
+
+    <!-- Sección Visión -->
+    <div class="vision">
+        <h2>Visión</h2>
+        <div class="vision-content">
+            <p>Ser referentes en la educación de una cosmética más consciente y sostenible...</p>
+            <img src="general.webp" alt="Imagen representativa">
+        </div>
+    </div>
+
+    <!-- Sección Valores -->
+    <div class="valores">
+        <h2>Valores</h2>
+        <div class="esquema-valores">
+            <div class="valor">Sostenibilidad</div>
+            <div class="valor">Conciencia Cosmética</div>
+            <div class="valor">Innovación Educativa</div>
+            <div class="valor">Colaboración</div>
+            <div class="valor">Compromiso Medioambiental</div>
+        </div>
+    </div>
+    </section>
+</main>
+
+<script>
+    const images = ["noticia1.webp", "noticia2.webp"];
+    let index = 0;
+    document.getElementById("next").addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        document.getElementById("noticia-img").src = images[index];
+    });
+    document.getElementById("prev").addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        document.getElementById("noticia-img").src = images[index];
+    });
+</script>
 
 </body>
 </html>
