@@ -14,6 +14,7 @@ body {
     box-sizing: border-box;
     background: url('fondo1.webp') no-repeat center center fixed;
     background-size: cover;
+    overflow-x: auto;
 }
 
 /* Header */
@@ -30,6 +31,8 @@ header {
     height: 100px;
     z-index: 1000;
     border-bottom: 2px solid #ccc;
+    overflow-x: auto; /* Permite el scroll lateral */
+    overflow-y: hidden; /* Permite el scroll lateral */
 }
 
 /* Ajuste general para evitar deformaciones en diferentes tamaños de pantalla */
@@ -707,6 +710,19 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
+.sdo-logo p {
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 25px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .beneficios-container {
     display: flex;
     flex-wrap: wrap;
@@ -766,30 +782,37 @@ nav ul li a {
     background-color: white;
     margin-left: 100px;
     margin-right: 100px;
-    border-radius: 0px;
+    border-radius: 10px;
     align-items: center;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
 .contenedor4 p {
     text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 20px;
-    padding: 15px;
-    padding-bottom: 30px;
+    line-height: 1.5;
+    padding: 25px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .video-container {
     max-width: 700px;
     margin: 50px auto;
     padding: 20px;
-    background: #4f5a45da;
+    background: #4c553de3;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 .video-container h2 {
     font-size: 24px;
-    color: rgb(244, 255, 219);
+    color: rgb(225, 228, 200);
     margin-bottom: 15px;
 }
 
